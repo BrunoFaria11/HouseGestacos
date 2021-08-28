@@ -1,0 +1,39 @@
+<section class="testimonial spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="testimonial__pic">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603370.jpg?k=9ccc43b38107b3628cffe6366db8a61cfe79cdc846872fcbeb5ba1731e4e527a&o=&hp=1" alt="">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="testimonial__text">
+                    <div class="section-title">
+                        <app-section-header [props]="{title:'Testimonials', subTitle:'What do customers say about us?'}"></app-section-header>
+                    </div>
+                    <div class="testimonial__slider__content">
+                        <div class="testimonial__slider owl-carousel">
+                            <div class="testimonial__item" *ngFor="let item of [1,2,3,4,5]">
+                                <h5>Detailed Review:</h5>
+
+                                <p>Here you will set wich Testimonials you want in your site, you will configure all like text, person that comment</p>
+                                <div class="testimonial__author">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <div class="testimonial__author__title">
+                                                <h5>Ridchard Houston</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                     
+                        </div>
+                        <div class="slide-num" id="snh-1"></div>
+                        <div class="slider__progress"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

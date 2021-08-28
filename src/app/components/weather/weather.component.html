@@ -1,0 +1,7 @@
+<div class="weather-wrapper">
+    <div class="weather-card">
+        <div class="weather-icon " [ngClass]="{'sun': condition < 1063, 'cloud' : condition >= 1063  }"></div>
+        <h1>{{temp_c}}º</h1>
+        <p>Gerês</p>
+    </div>
+</div>

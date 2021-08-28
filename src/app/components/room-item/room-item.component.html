@@ -1,0 +1,20 @@
+<div class="row" >
+    <div class="col-lg-6 p-0  col-md-6" [ngClass]="{'order-lg-2 order-md-2': props.position === 'left', 'order-lg-1 order-md-1' : props.position === 'right' }">
+        <div class="room__pic__slider owl-carousel">
+            <div class="room__pic__item set-bg" *ngFor="let image of props.images" [attr.setbg]="image"></div>
+        </div>
+    </div>
+    <div class="col-lg-6 p-0 col-md-6" [ngClass]="{'order-lg-1 order-md-1': props.position === 'left', 'order-lg-2 order-md-2' : props.position === 'right' }" >
+        <div class="room__text" [ngClass]="{'right__text' : props.position === 'right' }">
+            <h2>{{props.title}}</h2>
+            <ul>
+                <li><span>Size:</span>30 ft</li>
+                <li><span>Capacity:</span>Max persion 3</li>
+                <li><span>Bed:</span>King Beds</li>
+                <li><span>Services:</span>Wifi, Television, Bathroom,...</li>
+                <li><span>View:</span>Sea View</li>
+            </ul>
+            <a href="#">View Details</a>
+        </div>
+    </div>
+</div>

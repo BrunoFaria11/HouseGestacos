@@ -1,0 +1,36 @@
+<header class="header">
+    <app-info-nav-bar [props]="{info1: 'ola'}"></app-info-nav-bar>
+
+    <div class="header__nav__option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a routerLink="/home" class="logo">
+                            <h2>Quinta Gestaçós</h2>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav">
+                        <nav class="header__menu">
+                            <ul class="menu__class">
+                                <li routerLink="/home" [routerLinkActive]="['active']"><a>Home</a></li>
+                                <li routerLink="/rooms" [routerLinkActive]="['active']"><a>Rooms</a></li>
+                                <li routerLink="/about-us" [routerLinkActive]="['active']"><a>About Us</a></li>
+                                <li routerLink="/geres" [routerLinkActive]="['active']"> <a>Gerês</a></li>
+                                <li routerLink="/contact" [routerLinkActive]="['active']"><a>Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__nav__widget">
+                            <a href="#">Book Now <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open">
+                <span class="fa fa-bars"></span>
+            </div>
+        </div>
+    </div>
+</header>
