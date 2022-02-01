@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-testimonials-section',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testimonials-section.component.scss']
 })
 export class TestimonialsSectionComponent implements OnInit {
+  @Input() WebsiteData!: any;
 
   constructor() { }
 

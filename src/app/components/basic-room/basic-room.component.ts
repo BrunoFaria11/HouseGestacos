@@ -3,7 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 interface BasicRoomProps {
   image: string;
   title: string;
-  button: string;
 }
 
 @Component({

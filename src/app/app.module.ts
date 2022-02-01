@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { InfoNavBarComponent } from './components/info-nav-bar/info-nav-bar.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
@@ -25,12 +25,19 @@ import { TestimonialsSectionComponent } from './containers/home/sections/testimo
 import { GallerySectionComponent } from './containers/home/sections/gallery-section/gallery-section.component';
 import { RoomsSectionComponent } from './containers/home/sections/rooms-section/rooms-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
-import { InitialInfoSectionComponent } from './containers/home/sections/initial-info-section/initial-info-section.component'
+import { InitialInfoSectionComponent } from './containers/home/sections/initial-info-section/initial-info-section.component';
 import { BannerSectionComponent } from './containers/home/sections/banner-section/banner-section.component';
 import { ServiceItemComponent } from './components/service-item/service-item.component';
 import { BasicRoomComponent } from './components/basic-room/basic-room.component';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
+import { WebsiteDataService } from './core/services/website-data.service';
+import { HttpModule } from '@angular/http';
 
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
 
 
 @NgModule({
@@ -60,7 +67,6 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     ServiceItemComponent,
     BasicRoomComponent,
     SectionHeaderComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -69,9 +75,13 @@ import { SectionHeaderComponent } from './components/section-header/section-head
     HttpClientModule,
     FontAwesomeModule,
     CarouselModule,
-    FormsModule, ReactiveFormsModule
+    CommonModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    WebsiteDataService, 
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

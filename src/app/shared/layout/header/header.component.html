@@ -1,36 +1,60 @@
 <header class="header">
-    <app-info-nav-bar [props]="{info1: 'ola'}"></app-info-nav-bar>
+  <app-info-nav-bar [languages]="WebsiteStore.Languages"></app-info-nav-bar>
 
-    <div class="header__nav__option">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="header__logo">
-                        <a routerLink="/home" class="logo">
-                            <h2>Quinta Gestaçós</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="header__nav">
-                        <nav class="header__menu">
-                            <ul class="menu__class">
-                                <li routerLink="/home" [routerLinkActive]="['active']"><a>Home</a></li>
-                                <li routerLink="/rooms" [routerLinkActive]="['active']"><a>Rooms</a></li>
-                                <li routerLink="/about-us" [routerLinkActive]="['active']"><a>About Us</a></li>
-                                <li routerLink="/geres" [routerLinkActive]="['active']"> <a>Gerês</a></li>
-                                <li routerLink="/contact" [routerLinkActive]="['active']"><a>Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="header__nav__widget">
-                            <a href="#">Book Now <span class="arrow_right"></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas__open">
-                <span class="fa fa-bars"></span>
-            </div>
+  <div class="header__nav__option">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="header__logo">
+            <a routerLink="/home" class="logo">
+              <h2>
+                {{websiteData?.config?.header.name?.[WebsiteStore.LanguageSelected.code]?.name}}
+              </h2>
+            </a>
+          </div>
         </div>
+        <div class="col-lg-10">
+          <div class="header__nav">
+            <nav class="header__menu">
+              <ul class="menu__class">
+                <li routerLink="/home" [routerLinkActive]="['active']">
+                  <a
+                    >{{websiteData?.config?.header?.menus?.[WebsiteStore.LanguageSelected.code]?.home}}</a
+                  >
+                </li>
+                <li routerLink="/rooms" [routerLinkActive]="['active']">
+                  <a
+                    >{{websiteData?.config?.header?.menus?.[WebsiteStore.LanguageSelected.code]?.rooms}}</a
+                  >
+                </li>
+                <li routerLink="/about-us" [routerLinkActive]="['active']">
+                  <a
+                    >{{websiteData?.config?.header?.menus?.[WebsiteStore.LanguageSelected.code]?.about_us}}</a
+                  >
+                </li>
+                <li routerLink="/geres" [routerLinkActive]="['active']">
+                  <a
+                    >{{websiteData?.config?.header?.menus?.[WebsiteStore.LanguageSelected.code]?.geres}}</a
+                  >
+                </li>
+                <li routerLink="/contact" [routerLinkActive]="['active']">
+                  <a
+                    >{{websiteData?.config?.header?.menus?.[WebsiteStore.LanguageSelected.code]?.contact}}</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="header__nav__widget">
+              <a href="#"
+                >{{websiteData?.config?.header.book?.[WebsiteStore.LanguageSelected.code]?.button}}<span class="arrow_right"><fa-icon [icon]="icons.faArrowRight" style="font-size: 14px;padding-left: 9px;vertical-align: text-top;"></fa-icon></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="canvas__open">
+        <span> <fa-icon [icon]="icons.faBars"></fa-icon></span>
+      </div>
     </div>
+  </div>
 </header>

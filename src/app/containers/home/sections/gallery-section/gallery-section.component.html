@@ -1,28 +1,46 @@
 <section class="gallery spad">
-    <div class="gallery__text">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="section-title">
-                        <app-section-header [props]="{title:'OUR GALLERY', subTitle:'Explore The Most Beautiful In The Farm'}"></app-section-header>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="gallery__title">
-                        <p>Here will be a link to Gallery, and in the slide you will choose the principal photos.
-                            More text,More text,More text,More text,More text,More text,More text,More text,
-                            More text,More text,More text,More text,More text,More text,More text,
-                        </p>
-                        <a href="#" class="primary-btn">View Gallery <span class="arrow_right"></span></a>
-                    </div>
-                </div>
-            </div>
+  <div class="gallery__text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="section-title">
+            <app-section-header
+              [props]="{title:WebsiteData.json.home?.gallery?.text_component?.[WebsiteData.language]?.title, subTitle:WebsiteData.json.home?.gallery?.text_component?.[WebsiteData.language]?.sub_title}"
+            ></app-section-header>
+          </div>
         </div>
+        <div
+          class="col-lg-6 col-md-6 col-sm-6 text-xl-left text-lg-left text-md-center text-sm-center"
+        >
+          <div class="gallery__title">
+            <p>
+              {{WebsiteData.json.home?.gallery?.text_component?.[WebsiteData.language]?.text}}
+            </p>
+            <a href="#" class="primary-btn"
+              >{{WebsiteData.json.home?.gallery?.text_component?.[WebsiteData.language]?.button}}
+              <span class="arrow_right"></span
+            ></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="gallery__slider owl-carousel">
-        <div class="gallery__item small__item set-bg" data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598011.jpg?k=67f898b4456768d1f572844700a9fea943431c58e807ffcfdbc754927fc6a7b6&o=&hp=1"></div>
-        <div class="gallery__item set-bg" data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603357.jpg?k=abb93c064b186ac46a22dad211bf0b3f249f0e7829b6db8cad7fbadc0aa81111&o=&hp=1"></div>
-        <div class="gallery__item set-bg" data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603303.jpg?k=e94d32a698733f2f48de1713ffc2488c2320e7a44232d501966b20a03d43ec4a&o=&hp=1"></div>
-        <div class="gallery__item set-bg" data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603388.jpg?k=36afae4a8debd4db19a50108f7cdfd7648a3cf4c9a99d78670584f5627f35d94&o=&hp=1"></div>
-    </div>
+  </div>
+  <div class="gallery__slider owl-carousel">
+    <div
+      class="gallery__item small__item set-bg"
+      data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598011.jpg?k=67f898b4456768d1f572844700a9fea943431c58e807ffcfdbc754927fc6a7b6&o=&hp=1"
+    ></div>
+    <div
+      class="gallery__item set-bg"
+      data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603357.jpg?k=abb93c064b186ac46a22dad211bf0b3f249f0e7829b6db8cad7fbadc0aa81111&o=&hp=1"
+    ></div>
+    <div
+      class="gallery__item set-bg"
+      data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603303.jpg?k=e94d32a698733f2f48de1713ffc2488c2320e7a44232d501966b20a03d43ec4a&o=&hp=1"
+    ></div>
+    <div
+      class="gallery__item set-bg"
+      data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603388.jpg?k=36afae4a8debd4db19a50108f7cdfd7648a3cf4c9a99d78670584f5627f35d94&o=&hp=1"
+    ></div>
+  </div>
 </section>

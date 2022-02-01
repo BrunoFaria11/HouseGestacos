@@ -2,3 +2,21 @@
 .weather:hover + .weather-wrapper {
     display: block!important;
 }
+
+.offcanvas__logo .logo{
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+}
+.offcanvas__logo a h2{
+    color: white;
+    text-decoration: none;
+}
+.offcanvas__logo a{
+    text-decoration: none;
+}
+
+.offcanvas__widget ul{
+    padding-left: 0px;
+}
+

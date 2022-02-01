@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebsiteDataStoreService } from 'src/app/core/services/store/website-data-store.service';
 
 @Component({
   selector: 'app-rooms',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
-  constructor() { 
+  constructor(public WebsiteStore: WebsiteDataStoreService) { 
   }
 
   ngOnInit(): void {

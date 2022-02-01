@@ -1,25 +1,90 @@
 <section class="home-about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="home__about__text">
-                    <div class="section-title">
-                        <app-section-header [props]="{title:'ABOUT US', subTitle:'Welcome Quinta Gestaçós In Gerês'}"></app-section-header>
-                    </div>
-                    <p class="first-para">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                        fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    <p class="last-para">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                        doloremque.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="home__about__pic">
-                    <div class="parent">
-                        <img class="image1" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603382.jpg?k=86d69f73a0a1b802247b5ad8535addc1c5d914361ae4e8d08ba53a4f205e4184&o=&hp=1" />
-                        <img class="image2" src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1" />
-                    </div>                
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-12 col-mg-12 col-sm-12">
+        <div class="home__about__text">
+          <div class="section-title">
+            <app-section-header
+              [props]="{
+                title: WebsiteData.json.home?.about_us?.text_component?.[WebsiteData.language]?.title,
+                subTitle: WebsiteData.json.home?.about_us?.text_component?.[WebsiteData.language]?.sub_title
+              }"
+            ></app-section-header>
+          </div>
+          <p
+            class="
+              first-para
+              text-xl-left text-lg-left text-md-left text-sm-center
+            "
+          >
+            {{WebsiteData.json.home?.about_us?.text_component?.[WebsiteData.language]?.text}}
+          </p>
+          <!-- <p
+            class="
+              last-para
+              text-xl-left text-lg-left text-md-left text-sm-center
+            "
+          >
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque.
+          </p> -->
         </div>
+      </div>
+      <div
+        class="
+          col-xl-6 col-lg-12 col-mg-12 col-sm-12
+          dd-xl-block dd-lg-none dd-md-none dd-sm-none
+        "
+      >
+        <div class="home__about__pic">
+          <div class="parent">
+            <img
+              class="image1"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603382.jpg?k=86d69f73a0a1b802247b5ad8535addc1c5d914361ae4e8d08ba53a4f205e4184&o=&hp=1"
+            />
+            <img
+              class="image2"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="
+          col-xl-6 col-lg-12 col-mg-12 col-sm-12
+          dd-xl-none dd-lg-none dd-md-block dd-xs-block
+        "
+      >
+        <img
+          class="image1 mb-10"
+          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1"
+        />
+        <img
+          class="image2 mt-10"
+          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1"
+        />
+      </div>
+      <div
+        class="
+          col-xl-6 col-lg-12 col-mg-12 col-sm-12
+          dd-xl-none dd-lg-block dd-md-none dd-xs-none
+        "
+      >
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              class="image1 mb-10"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1"
+            />
+          </div>
+          <div class="col-lg-6">
+            <img
+              class="image2 mt-10"
+              src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598127.jpg?k=437c7bc44b4c0072a8fb6d744b6b18569118b906c1594392826cd6c21314517e&o=&hp=1"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

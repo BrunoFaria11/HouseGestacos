@@ -4,18 +4,18 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="hero__text">
-                    <app-section-header [props]="{title:'WELCOME Quinta Gestaçós', subTitle:'Experience the greatest for you holidays.'}"></app-section-header>
+                    <app-section-header [props]="{title:WebsiteStore.WebsiteData?.home?.banner?.banner_component?.[WebsiteStore.LanguageSelected.code]?.title, subTitle:WebsiteStore.WebsiteData?.home?.banner?.banner_component?.[WebsiteStore.LanguageSelected.code]?.sub_title}"></app-section-header>
                 </div>
                 <form action="#" class="filter__form">
                     <div class="filter__form__item filter__form__item--search">
-                        <p>Location</p>
+                        <p>{{WebsiteStore.WebsiteData?.home?.banner?.book_component?.[WebsiteStore.LanguageSelected.code]?.email}}</p>
                         <div class="filter__form__input">
-                            <input type="text" placeholder="Search Location">
+                            <input type="text" placeholder={{WebsiteStore.WebsiteData?.home?.banner?.book_component?.[WebsiteStore.LanguageSelected.code]?.email}}>
                             <span class="icon_search"></span>
                         </div>
                     </div>
                     <div class="filter__form__item">
-                        <p>Check In</p>
+                        <p>{{WebsiteStore.WebsiteData?.home?.banner?.book_component?.[WebsiteStore.LanguageSelected.code]?.check_in}}</p>
                         <div class="filter__form__datepicker">
                             <span class="icon_calendar"></span>
                             <input type="text" class="datepicker_pop check__in">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="filter__form__item">
-                        <p>Check Out</p>
+                        <p>{{WebsiteStore.WebsiteData?.home?.banner?.book_component?.[WebsiteStore.LanguageSelected.code]?.check_out}}</p>
                         <div class="filter__form__datepicker">
                             <span class="icon_calendar"></span>
                             <input type="text" class="datepicker_pop check__out">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="filter__form__item filter__form__item--select">
-                        <p>Person</p>
+                        <p>{{WebsiteStore.WebsiteData?.home?.banner?.book_component?.[WebsiteStore.LanguageSelected.code]?.person}}</p>
                         <div class="filter__form__select">
                             <span class="icon_group"></span>
                             <select>
@@ -41,7 +41,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit">BOOK NOW</button>
+                    <button type="submit">{{WebsiteStore?.WebsiteData?.config?.header.book?.[WebsiteStore.LanguageSelected.code]?.button}}</button>
                 </form>
             </div>
         </div>

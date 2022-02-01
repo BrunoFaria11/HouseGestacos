@@ -1,51 +1,92 @@
 <div class="offcanvas-menu-overlay"></div>
 <div class="offcanvas-menu-wrapper">
-    <div class="offcanvas__logo">
-        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-    </div>
-    <div id="mobile-menu-wrap"></div>
-    <div class="offcanvas__btn__widget">
-        <a href="#">Book Now <span class="arrow_right"></span></a>
-    </div>
-    <div class="offcanvas__widget">
-        <ul>
-            <li><span class="icon_pin_alt"></span> geres n4 terras de bouro</li>
-            <li><span class="icon_phone"></span> (123) 456-78-910</li>
-        </ul>
-    </div>
-    <div class="offcanvas__widget">
-        <app-weather></app-weather>
-    </div>
-    <div class="offcanvas__language">
-        <img src="img/lan.png" alt="">
-        <span>English</span>
-        <i class="fa fa-angle-down"></i>
-        <ul>
-            <li>English</li>
-            <li>Bangla</li>
-        </ul>
-    </div>
-
+  <div class="offcanvas__logo">
+    <a routerLink="/home" class="logo">
+      <h2>
+        {{WebsiteStore.WebsiteData?.config?.header.name?.[WebsiteStore.LanguageSelected.code]?.name}}
+      </h2>
+    </a>
+  </div>
+  <div id="mobile-menu-wrap"></div>
+  <div class="offcanvas__btn__widget">
+    <a href="#"
+      >{{WebsiteStore.WebsiteData?.config?.header.book?.[WebsiteStore.LanguageSelected.code]?.button}}
+      <span class="arrow_right"></span
+    ></a>
+  </div>
+  <div class="offcanvas__widget">
+    <ul>
+      <li>
+        <span class=""
+          ><fa-icon [icon]="icons.faMapPin" style="font-size: 14px"></fa-icon
+        ></span>
+        {{WebsiteStore?.WebsiteData?.config?.mini_header?.address?.[WebsiteStore.LanguageSelected.code]?.address}}
+      </li>
+      <li>
+        <span class=""
+          ><fa-icon [icon]="icons.faPhone" style="font-size: 14px"></fa-icon
+        ></span>
+        {{WebsiteStore?.WebsiteData?.config?.mini_header?.phone_number?.[WebsiteStore.LanguageSelected.code]?.phone_number}}
+      </li>
+    </ul>
+  </div>
+  <div class="offcanvas__widget">
+    <app-weather></app-weather>
+  </div>
+  <div class="offcanvas__language">
+    <img src="img/lan.png" alt="" />
+    <span>{{ WebsiteStore.LanguageSelected.name }}</span>
+    <fa-icon [icon]="icons.faArrowDown" style="font-size: 15px;color:#E9AD28;padding-left:10px"></fa-icon>
+    <ul>
+      <li *ngFor="let item of languages" (click)="changeLanguage(item.id)">
+        {{ item.name }}
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div class="header__top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <ul class="header__top__widget">
-                    <li><span>
-                            <fa-icon [icon]="icons.faMapPin" style="font-size: 14px"></fa-icon>
-                        </span> geres n4 terras de bouro </li>
-                    <li><span>
-                            <fa-icon [icon]="icons.faPhone" style="font-size: 14px"></fa-icon>
-                        </span> (123) 456-78-910</li>
-                </ul>
-            </div>
-            <div class="col-lg-7">
-                <div class="header__top__widget" style="padding-top:0px">
-                    <app-weather></app-weather>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <ul class="header__top__widget">
+          <li>
+            <span>
+              <fa-icon
+                [icon]="icons.faMapPin"
+                style="font-size: 14px"
+              ></fa-icon>
+            </span>
+            {{WebsiteStore?.WebsiteData?.config?.mini_header?.address?.[WebsiteStore.LanguageSelected.code]?.address}}
+          </li>
+          <li>
+            <span>
+              <fa-icon [icon]="icons.faPhone" style="font-size: 14px"></fa-icon>
+            </span>
+            {{WebsiteStore?.WebsiteData?.config?.mini_header?.phone_number?.[WebsiteStore.LanguageSelected.code]?.phone_number}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <div class="header__top__widget" style="padding-top: 0px">
+          <app-weather></app-weather>
         </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="header__top__language" style="padding-top: 17px">
+          <img src="{{ WebsiteStore.LanguageSelected.imagePath }}" alt="" />
+          <span>{{ WebsiteStore.LanguageSelected.name }}</span>
+          <fa-icon [icon]="icons.faArrowDown" style="font-size: 15px;color:#E9AD28;padding-left:10px"></fa-icon>
+          <ul>
+            <li
+              *ngFor="let item of languages"
+              (click)="changeLanguage(item.id)"
+            >
+              {{ item.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

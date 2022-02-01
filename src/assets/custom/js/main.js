@@ -122,7 +122,7 @@ $(document).ready(function () {
             items: 1,
             dots: true,
             nav: true,
-            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            navText: ["<", ">"],
             smartSpeed: 1200,
             autoHeight: false,
             autoplay: true,

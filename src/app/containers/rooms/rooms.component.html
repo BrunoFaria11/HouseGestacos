@@ -1,5 +1,5 @@
 <app-banner
-    [props]="{image:'https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603382.jpg?k=86d69f73a0a1b802247b5ad8535addc1c5d914361ae4e8d08ba53a4f205e4184&o=&hp=1', title:'Rooms'}">
+    [props]="{image:'https://cf.bstatic.com/xdata/images/hotel/max1280x900/217603382.jpg?k=86d69f73a0a1b802247b5ad8535addc1c5d914361ae4e8d08ba53a4f205e4184&o=&hp=1', title: WebsiteStore.WebsiteData?.rooms?.banner?.banner_component?.[WebsiteStore.LanguageSelected.code]?.title}">
 </app-banner>
 <!-- Rooms Section Begin -->
 <section class="rooms spad">

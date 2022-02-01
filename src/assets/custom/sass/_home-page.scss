@@ -143,13 +143,13 @@
         width: 40px;
         border-radius: 50%;
         margin-right: 10px;
-
+        background-color: #e9ac27!important;
         &:last-child {
           margin-right: 0;
         }
 
         &:hover {
-          background: $heading-color;
+          background: #e9ac27;
           color: $white-color;
         }
       }
@@ -270,6 +270,10 @@
     background: $white-color;
     color: $heading-color;
   }
+  a:hover {
+    background: $white-color;
+    color: $heading-color;
+  }
 }
 
 /*---------------------
@@ -374,7 +378,7 @@
     display: inline-block;
     position: relative;
     padding: 2px 0;
-
+text-decoration: none;
     &:after {
       position: absolute;
       left: 0;
@@ -383,6 +387,9 @@
       width: 100%;
       background: #E9AD28;
       content: "";
+    }
+    &:hover{
+      color:#19191A;
     }
   }
 }

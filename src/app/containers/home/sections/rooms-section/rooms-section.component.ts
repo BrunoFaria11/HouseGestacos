@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rooms-section',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rooms-section.component.scss']
 })
 export class RoomsSectionComponent implements OnInit {
+  @Input() WebsiteData!: any;
 
   constructor() { }
 

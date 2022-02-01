@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-services-section',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services-section.component.scss']
 })
 export class ServicesSectionComponent implements OnInit {
+  @Input() services!: any;
+  @Input() paddingTop!: any;
 
   constructor() { }
+  
+  assetsPath = environment.assetsPath;
 
   ngOnInit(): void {
     

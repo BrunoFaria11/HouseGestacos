@@ -1,10 +1,36 @@
-
 <app-banner-section></app-banner-section>
-<app-initial-info-section></app-initial-info-section>
-<app-services-section></app-services-section>
-<app-rooms-section></app-rooms-section>
-<app-additional-info-section></app-additional-info-section>
-<app-gallery-section></app-gallery-section>
-<app-testimonials-section></app-testimonials-section>
-
-
+<app-initial-info-section
+  [WebsiteData]="{
+    json: WebsiteStore.WebsiteData,
+    language: WebsiteStore.LanguageSelected.code
+  }"
+></app-initial-info-section>
+<app-services-section
+  [paddingTop]="'250px'"
+  [services]="WebsiteStore.WebsiteData.home?.services?.services_component?.[WebsiteStore.LanguageSelected.code]?.services"
+></app-services-section>
+<app-rooms-section
+  [WebsiteData]="{
+    json: WebsiteStore.WebsiteData,
+    language: WebsiteStore.LanguageSelected.code
+  }"
+></app-rooms-section>
+<app-additional-info-section
+  [props]="{
+    title: WebsiteStore.WebsiteData.home?.choose?.choose_component?.[WebsiteStore.LanguageSelected.code]?.title,
+    sub_title: WebsiteStore.WebsiteData.home?.choose?.choose_component?.[WebsiteStore.LanguageSelected.code]?.sub_title,
+    button:WebsiteStore.WebsiteData.home?.choose?.choose_component?.[WebsiteStore.LanguageSelected.code]?.button
+  }"
+></app-additional-info-section>
+<app-gallery-section
+  [WebsiteData]="{
+    json: WebsiteStore.WebsiteData,
+    language: WebsiteStore.LanguageSelected.code
+  }"
+></app-gallery-section>
+<app-testimonials-section
+  [WebsiteData]="{
+    json: WebsiteStore.WebsiteData,
+    language: WebsiteStore.LanguageSelected.code
+  }"
+></app-testimonials-section>

@@ -9,19 +9,19 @@
             <div class="col-lg-7">
                 <div class="testimonial__text">
                     <div class="section-title">
-                        <app-section-header [props]="{title:'Testimonials', subTitle:'What do customers say about us?'}"></app-section-header>
+                        <app-section-header [props]="{title:WebsiteData.json.home?.testimonials?.info_component?.[WebsiteData.language]?.title, subTitle:WebsiteData.json.home?.testimonials?.info_component?.[WebsiteData.language]?.sub_title}"></app-section-header>
                     </div>
                     <div class="testimonial__slider__content">
                         <div class="testimonial__slider owl-carousel">
-                            <div class="testimonial__item" *ngFor="let item of [1,2,3,4,5]">
-                                <h5>Detailed Review:</h5>
+                            <div class="testimonial__item" *ngFor="let item of WebsiteData.json.home?.testimonials?.testimonials_component?.[WebsiteData.language]?.testimonials">
+                                <h5>{{item.title}}</h5>
 
-                                <p>Here you will set wich Testimonials you want in your site, you will configure all like text, person that comment</p>
+                                <p>{{item.text}}</p>
                                 <div class="testimonial__author">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="testimonial__author__title">
-                                                <h5>Ridchard Houston</h5>
+                                                <h5>{{item.name}}</h5>
                                             </div>
                                         </div>
                                     </div>

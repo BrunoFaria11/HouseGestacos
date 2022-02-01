@@ -1,13 +1,24 @@
-<section class="services spad" style="padding-top: 200px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-6" *ngFor="let item of [1,2,3,4,5,6]">
-                <app-service-item
-                    [props]="{image: '../../../../../assets/images/services/services-'+item+'.png',
-                            title: 'service',
-                            subTitle:'here you will set services so you have in your house like golf, Free Wi-Fi, Pool, Coffee..., you will set the image and title'}">
-                </app-service-item>
-            </div>
-        </div>
+<section class="services spad" [ngStyle]="{'padding-top': paddingTop }">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-4 col-md-4 col-sm-6"
+        *ngFor="let item of services"
+      >
+        <app-service-item
+          [props]="{
+            image:
+              '' +
+              this.assetsPath +
+              '/images/services/services-' +
+              1 +
+              '.png',
+            title: item.title,
+            subTitle: item.subTitle
+          }"
+        >
+        </app-service-item>
+      </div>
     </div>
+  </div>
 </section>
