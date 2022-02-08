@@ -159,8 +159,12 @@ ol {
   color: $white-color;
   background: $primary-color;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
+.primary-btn:hover {
+  color:$white-color;
+}
 /* Preloder */
 #preloder {
   position: fixed;

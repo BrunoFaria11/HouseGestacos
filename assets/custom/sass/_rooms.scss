@@ -106,7 +106,7 @@
         display: inline-block;
         font-weight: 500;
         @include transition(all, .3s);
-
+        text-decoration: none;
         &:before {
             position: absolute;
             left: 0;
@@ -115,6 +115,9 @@
             width: 100%;
             background: #E9AD28;
             content: "";
+        }
+        &:hover{
+            color: #1d1c1c;
         }
     }
 }

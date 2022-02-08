@@ -108,6 +108,11 @@
         z-index: 9;
         opacity: 0;
         visibility: hidden;
+
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
         @include transition(all, .3s);
 
         li {
@@ -209,6 +214,7 @@
 
                 &:hover {
                     color: $primary-color;
+                    cursor: pointer;
                 }
             }
         }
@@ -225,13 +231,19 @@
         letter-spacing: 2px;
         background: $white-color;
         padding: 13px 20px 11px;
+        text-decoration: none;
         span {
             font-size: 20px;
             color: $primary-color;
             position: relative;
             top: 4px;
         }
+        &:hover {
+            text-decoration: none;
+            color: #1d1c1c;
+        }
     }
+
 }
 
 .offcanvas-menu-wrapper {
