@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-initial-info-section',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InitialInfoSectionComponent implements OnInit {
   @Input() WebsiteData!: any;
-
+  FTP_HOST: string =  environment.cm_ftp_images;
   constructor() {}
 
   ngOnInit(): void {}

@@ -69,6 +69,7 @@ export class WebsiteDataService {
             dataSource,
             'encrypt'
           );
+          console.log(decryptData)
           resolve({ json: JSON.parse(decryptData) });
         } else {
           this.getWebsiteData().subscribe((response: any) => {

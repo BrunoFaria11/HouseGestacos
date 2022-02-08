@@ -8,6 +8,8 @@ export const environment = {
   cm_api_host: 'http://localhost:4000',
   cm_version: 'v1',
   cm_application_uuid: '41c31168-f963-4814-8d0b-3925a9b24a82',
+  cm_ftp_images:
+    'http://153.92.211.5/media/41c31168-f963-4814-8d0b-3925a9b24a82',
 };
 
 /*

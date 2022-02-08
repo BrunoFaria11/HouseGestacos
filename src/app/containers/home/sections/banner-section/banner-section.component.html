@@ -1,5 +1,5 @@
 
-<section class="hero spad set-bg banner" data-setbg="https://cf.bstatic.com/xdata/images/hotel/max1280x900/217598011.jpg?k=67f898b4456768d1f572844700a9fea943431c58e807ffcfdbc754927fc6a7b6&o=&hp=1" >
+<section class="hero spad set-bg banner" [attr.data-setbg]="FTP_HOST + WebsiteStore.WebsiteData?.home?.banner?.banner_component?.[WebsiteStore.LanguageSelected.code]?.image" >
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
