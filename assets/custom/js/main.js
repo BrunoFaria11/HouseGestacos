@@ -17,16 +17,16 @@ $(document).ready(function () {
         /*------------------
             Background Set
         --------------------*/
-        $('.set-bg').each(function () {
-            var bg = $(this).data('setbg');
-            if (bg == undefined) {
-                bg = $(this)[0].attributes.setbg.nodeValue;
-            }
-            $(this).css('background-image', 'linear-gradient(#e9ad2842,#e9ad2842),url(' + bg + ')');
-            $(this).css('background-position', 'center');
-            $(this).css('background-repeat', 'none');
-            $(this).css('background-size', '(100%,100%)');
-        });
+        // $('.set-bg').each(function () {
+        //     var bg = $(this).data('setbg');
+        //     if (bg == undefined) {
+        //         bg = $(this)[0].attributes.setbg.nodeValue;
+        //     }
+        //     $(this).css('background-image', 'linear-gradient(#e9ad2842,#e9ad2842),url(' + bg + ')');
+        //     $(this).css('background-position', 'center');
+        //     $(this).css('background-repeat', 'none');
+        //     $(this).css('background-size', '(100%,100%)');
+        // });
 
         //Canvas Menu
         $(".canvas__open").on('click', function () {
